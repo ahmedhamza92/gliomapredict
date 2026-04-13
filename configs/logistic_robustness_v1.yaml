@@ -1,0 +1,33 @@
+name: logistic_robustness_v1
+source_artifacts:
+  baseline_config: configs/baseline_v1.yaml
+  baseline_metrics_csv: reports/baseline_metrics_v1.csv
+  baseline_predictions_csv: reports/baseline_test_predictions_v1.csv
+  features_path: data/processed/radiomics_features_v1.parquet
+  splits_path: data/interim/splits_v1.parquet
+training_pool_robustness:
+  method: repeated_stratified_cv
+  n_splits: 5
+  n_repeats: 20
+  random_state: 20260412
+bootstrap_test_ci:
+  method: stratified_percentile_bootstrap
+  n_resamples: 5000
+  ci_alpha: 0.95
+  random_state: 20260412
+feature_stability:
+  top_k: 10
+  nonzero_threshold: 1.0e-8
+artifacts:
+  robustness_runs_csv: data/processed/logistic_robustness_cv_v1.csv
+  robustness_summary_csv: data/processed/logistic_robustness_summary_v1.csv
+  bootstrap_resamples_csv: data/processed/logistic_bootstrap_resamples_v1.csv
+  bootstrap_ci_csv: data/processed/logistic_bootstrap_ci_v1.csv
+  coefficient_runs_csv: data/processed/logistic_feature_coefficients_v1.csv
+  coefficient_stability_csv: data/processed/logistic_feature_stability_v1.csv
+  robustness_note: reports/logistic_robustness_v1.md
+  bootstrap_note: reports/logistic_bootstrap_ci_v1.md
+  feature_note: reports/feature_stability_v1.md
+  robustness_figure: reports/figures/logistic_train_robustness_v1.svg
+  bootstrap_figure: reports/figures/logistic_bootstrap_ci_v1.svg
+  feature_figure: reports/figures/logistic_feature_stability_v1.svg

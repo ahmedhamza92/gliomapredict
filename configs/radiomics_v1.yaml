@@ -1,0 +1,26 @@
+name: radiomics_v1
+source_index: data/processed/radiomics_inputs_v1_index.parquet
+modalities:
+  - flair
+  - t1c
+  - t2
+roi:
+  source: roi_mask_crop_path
+  binary_rule: mask_gt_0
+feature_families:
+  - shape
+  - first_order
+  - filter_response
+settings:
+  histogram_bins: 64
+  include_percentiles:
+    - 10
+    - 25
+    - 75
+    - 90
+artifacts:
+  features_csv: data/processed/radiomics_features_v1.csv
+  features_parquet: data/processed/radiomics_features_v1.parquet
+  feature_qc_csv: data/processed/radiomics_feature_qc_v1.csv
+  note: reports/radiomics_features_v1.md
+

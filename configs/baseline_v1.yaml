@@ -1,0 +1,43 @@
+name: baseline_v1
+target_label: idh_label
+primary_model:
+  kind: logistic_regression
+  class_weight: balanced
+  solver: liblinear
+  penalty_grid:
+    - l1
+    - l2
+  c_grid:
+    - 0.01
+    - 0.1
+    - 1.0
+    - 10.0
+secondary_model:
+  enabled: true
+  kind: random_forest
+  class_weight: balanced_subsample
+  n_estimators: 400
+  random_state: 20260412
+  grid:
+    max_depth:
+      - 4
+      - 8
+      - null
+    min_samples_leaf:
+      - 1
+      - 3
+      - 5
+selection:
+  scorer: roc_auc
+  refit: true
+feature_handling:
+  imputation: median
+  remove_zero_variance: true
+  scale_for_linear_models: true
+artifacts:
+  metrics_csv: reports/baseline_metrics_v1.csv
+  predictions_csv: reports/baseline_test_predictions_v1.csv
+  results_note: reports/baseline_results_v1.md
+  roc_figure: reports/figures/baseline_roc_v1.svg
+  logistic_coef_figure: reports/figures/logistic_top_features_v1.svg
+

@@ -1,0 +1,30 @@
+category,key,value,notes
+cohort,cohort_size,495,Frozen primary pre-operative cohort
+cohort,idh_wildtype_count,392,Frozen cohort label count
+cohort,idh_mutant_count,103,Frozen cohort label count
+split,train_subjects,396,Frozen training pool
+split,test_subjects,99,Frozen held-out test pool
+split,train_wildtype,314,Frozen training pool label count
+split,train_mutant,82,Frozen training pool label count
+split,test_wildtype,78,Frozen test pool label count
+split,test_mutant,21,Frozen test pool label count
+logistic,roc_auc,0.9407814407814408,Held-out test
+logistic,balanced_accuracy,0.8946886446886446,Held-out test
+logistic,sensitivity,0.9047619047619048,Held-out test
+logistic,specificity,0.8846153846153846,Held-out test
+logistic,confusion_matrix,"TN=69,FP=9,FN=2,TP=19",Held-out test
+random_forest,roc_auc,0.913919413919414,Held-out test
+random_forest,balanced_accuracy,0.8553113553113553,Held-out test
+random_forest,sensitivity,0.7619047619047619,Held-out test
+random_forest,specificity,0.9487179487179488,Held-out test
+random_forest,confusion_matrix,"TN=74,FP=4,FN=5,TP=16",Held-out test
+cnn,roc_auc,0.9316239316239316,Held-out test
+cnn,balanced_accuracy,0.7536630036630036,Held-out test
+cnn,sensitivity,0.5714285714285714,Held-out test
+cnn,specificity,0.935897435897436,Held-out test
+cnn,confusion_matrix,"TN=73,FP=5,FN=9,TP=12",Held-out test
+logistic_bootstrap_ci,roc_auc_95pct,"0.8638583638583639 to 0.995115995115995",Stratified percentile bootstrap on frozen test predictions
+logistic_bootstrap_ci,balanced_accuracy_95pct,"0.8168498168498168 to 0.9551282051282052",Stratified percentile bootstrap on frozen test predictions
+logistic_bootstrap_ci,sensitivity_95pct,"0.7619047619047619 to 1.0",Stratified percentile bootstrap on frozen test predictions
+logistic_bootstrap_ci,specificity_95pct,"0.8076923076923077 to 0.9487179487179488",Stratified percentile bootstrap on frozen test predictions
+feature_stability,top_stable_features,"t1c_skewness;t1c_std;shape_sphericity_approx;t1c_grad_std;t1c_min;t2_iqr;t2_max;flair_laplace_mean",Most repeatedly top-ranked logistic features

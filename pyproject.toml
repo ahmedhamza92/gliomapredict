@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "glioma-idh-public-export"
+version = "0.1.0"
+description = "Bounded radiogenomics pipeline for internal IDH prediction evaluation on UCSF-PDGM."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "numpy>=2.0",
+  "pandas>=2.0",
+  "pyarrow>=12",
+  "PyYAML>=6.0",
+  "scipy>=1.11",
+  "scikit-learn>=1.5",
+  "nibabel>=5.0",
+  "Pillow>=10.0",
+  "torch>=2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,52 @@
+name: preprocessing_v1
+canonical_inputs:
+  modalities:
+    - flair
+    - t1c
+    - t2
+  structural_variant: bias
+geometry:
+  additional_resampling: false
+  expected_shape:
+    - 240
+    - 240
+    - 155
+  expected_spacing_mm:
+    - 1.0
+    - 1.0
+    - 1.0
+roi:
+  definition: whole_tumour_union
+  binary_rule: mask_gt_0
+normalization:
+  scope: per_image_nonzero_voxels
+  clip_percentiles:
+    low: 1
+    high: 99
+  zscore_after_clipping: true
+  roi_based_normalization: false
+radiomics_baseline:
+  use_normalized_images: true
+  use_binary_roi: true
+cnn_crop_generation:
+  bbox_source: whole_tumour_union
+  padding_voxels:
+    x: 16
+    y: 16
+    z: 8
+  clip_to_image_bounds: true
+  defer_25d_slice_sampling: true
+artifacts:
+  modality_qc_csv: data/interim/cohort_v1_modality_qc.csv
+  modality_qc_parquet: data/interim/cohort_v1_modality_qc.parquet
+  mask_qc_csv: data/interim/cohort_v1_mask_qc.csv
+  mask_qc_parquet: data/interim/cohort_v1_mask_qc.parquet
+  preprocessing_note: reports/preprocessing_design_v1.md
+  roi_mask_dir: data/processed/roi_masks_v1
+  preproc_index_csv: data/processed/v1_preproc_index.csv
+  preproc_index_parquet: data/processed/v1_preproc_index.parquet
+  preproc_index_note: reports/preprocessing_index_v1.md
+  radiomics_ready_dir: data/processed/radiomics_inputs_v1
+  radiomics_ready_index_csv: data/processed/radiomics_inputs_v1_index.csv
+  radiomics_ready_index_parquet: data/processed/radiomics_inputs_v1_index.parquet
+  radiomics_ready_note: reports/radiomics_inputs_v1.md

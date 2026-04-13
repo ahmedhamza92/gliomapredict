@@ -1,0 +1,59 @@
+name: cnn_v1_1
+sources:
+  radiomics_inputs_index_csv: data/processed/radiomics_inputs_v1_index.csv
+  splits_csv: data/interim/splits_v1.csv
+  baseline_metrics_csv: reports/baseline_metrics_v1.csv
+  baseline_predictions_csv: reports/baseline_test_predictions_v1.csv
+representation:
+  plane: axial
+  center_rule: max_roi_area_tie_midpoint
+  slice_offsets:
+    - -2
+    - -1
+    - 0
+    - 1
+    - 2
+  modalities:
+    - flair
+    - t1c
+    - t2
+  channel_order: slice_major_modality_minor
+  resize_height: 128
+  resize_width: 128
+  output_dir: data/processed/cnn_inputs_v1
+  output_index_csv: data/processed/cnn_inputs_v1_index.csv
+  note_path: reports/cnn_inputs_v1.md
+training:
+  seed: 20260412
+  validation_fold: 0
+  batch_size: 16
+  max_epochs: 40
+  early_stopping_patience: 8
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  num_workers: 0
+  augmentation:
+    shift_pixels: 4
+    gaussian_noise_std: 0.02
+model:
+  channels:
+    - 24
+    - 48
+    - 96
+  dropout: 0.3
+loss:
+  kind: bce_with_logits_pos_weight
+artifacts:
+  selection_checkpoint: data/processed/cnn_v1_1_selection_best.pt
+  final_checkpoint: data/processed/cnn_v1_1_final.pt
+  history_csv: data/processed/cnn_training_history_v1.csv
+  metrics_csv: reports/cnn_metrics_v1.csv
+  predictions_csv: reports/cnn_test_predictions_v1.csv
+  comparison_csv: reports/cnn_vs_logistic_comparison_v1.csv
+  gradcam_cases_csv: data/processed/cnn_gradcam_cases_v1.csv
+  design_note: reports/cnn_design_v1.md
+  results_note: reports/cnn_results_v1.md
+  interpretability_note: reports/cnn_interpretability_v1.md
+  roc_figure: reports/figures/cnn_vs_logistic_roc_v1.svg
+  history_figure: reports/figures/cnn_training_history_v1.svg
+  gradcam_figure: reports/figures/cnn_gradcam_examples_v1.png

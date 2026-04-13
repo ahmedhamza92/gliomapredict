@@ -1,0 +1,37 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='660' height='460' viewBox='0 0 660 460'>
+<rect width='100%' height='100%' fill='white' />
+<text x='330.0' y='24' text-anchor='middle' font-size='18' font-family='Arial, sans-serif'>Held-out Test ROC Comparison</text>
+<line x1='70.00' y1='40' x2='70.00' y2='405' stroke='#e2e2e2' stroke-width='1' />
+<line x1='70' y1='405.00' x2='620' y2='405.00' stroke='#e2e2e2' stroke-width='1' />
+<text x='70.00' y='446' text-anchor='middle' font-size='12' font-family='Arial, sans-serif'>0.0</text>
+<text x='58' y='409.00' text-anchor='end' font-size='12' font-family='Arial, sans-serif'>0.0</text>
+<line x1='180.00' y1='40' x2='180.00' y2='405' stroke='#e2e2e2' stroke-width='1' />
+<line x1='70' y1='332.00' x2='620' y2='332.00' stroke='#e2e2e2' stroke-width='1' />
+<text x='180.00' y='446' text-anchor='middle' font-size='12' font-family='Arial, sans-serif'>0.2</text>
+<text x='58' y='336.00' text-anchor='end' font-size='12' font-family='Arial, sans-serif'>0.2</text>
+<line x1='290.00' y1='40' x2='290.00' y2='405' stroke='#e2e2e2' stroke-width='1' />
+<line x1='70' y1='259.00' x2='620' y2='259.00' stroke='#e2e2e2' stroke-width='1' />
+<text x='290.00' y='446' text-anchor='middle' font-size='12' font-family='Arial, sans-serif'>0.4</text>
+<text x='58' y='263.00' text-anchor='end' font-size='12' font-family='Arial, sans-serif'>0.4</text>
+<line x1='400.00' y1='40' x2='400.00' y2='405' stroke='#e2e2e2' stroke-width='1' />
+<line x1='70' y1='186.00' x2='620' y2='186.00' stroke='#e2e2e2' stroke-width='1' />
+<text x='400.00' y='446' text-anchor='middle' font-size='12' font-family='Arial, sans-serif'>0.6</text>
+<text x='58' y='190.00' text-anchor='end' font-size='12' font-family='Arial, sans-serif'>0.6</text>
+<line x1='510.00' y1='40' x2='510.00' y2='405' stroke='#e2e2e2' stroke-width='1' />
+<line x1='70' y1='113.00' x2='620' y2='113.00' stroke='#e2e2e2' stroke-width='1' />
+<text x='510.00' y='446' text-anchor='middle' font-size='12' font-family='Arial, sans-serif'>0.8</text>
+<text x='58' y='117.00' text-anchor='end' font-size='12' font-family='Arial, sans-serif'>0.8</text>
+<line x1='620.00' y1='40' x2='620.00' y2='405' stroke='#e2e2e2' stroke-width='1' />
+<line x1='70' y1='40.00' x2='620' y2='40.00' stroke='#e2e2e2' stroke-width='1' />
+<text x='620.00' y='446' text-anchor='middle' font-size='12' font-family='Arial, sans-serif'>1.0</text>
+<text x='58' y='44.00' text-anchor='end' font-size='12' font-family='Arial, sans-serif'>1.0</text>
+<rect x='70' y='40' width='550' height='365' fill='none' stroke='#222' stroke-width='1.5' />
+<polyline fill='none' stroke='#005f73' stroke-width='3' points='70.00,405.00 70.00,387.62 70.00,161.67 77.05,161.67 77.05,144.29 91.15,144.29 91.15,126.90 98.21,126.90 98.21,92.14 105.26,92.14 105.26,74.76 295.64,74.76 295.64,57.38 408.46,57.38 408.46,40.00 620.00,40.00' />
+<line x1='455' y1='58' x2='480' y2='58' stroke='#005f73' stroke-width='3' />
+<text x='490' y='62' font-size='12' font-family='Arial, sans-serif'>Frozen logistic baseline</text>
+<polyline fill='none' stroke='#ae2012' stroke-width='3' points='70.00,405.00 70.00,387.62 70.00,231.19 77.05,231.19 77.05,213.81 84.10,213.81 84.10,196.43 105.26,196.43 105.26,126.90 133.46,126.90 133.46,109.52 140.51,109.52 140.51,74.76 281.54,74.76 281.54,40.00 620.00,40.00' />
+<line x1='455' y1='78' x2='480' y2='78' stroke='#ae2012' stroke-width='3' />
+<text x='490' y='82' font-size='12' font-family='Arial, sans-serif'>Compact 2.5D CNN</text>
+<text x='330.0' y='450' text-anchor='middle' font-size='14' font-family='Arial, sans-serif'>False Positive Rate</text>
+<text x='18' y='230.0' text-anchor='middle' font-size='14' font-family='Arial, sans-serif' transform='rotate(-90 18 230.0)'>True Positive Rate</text>
+</svg>

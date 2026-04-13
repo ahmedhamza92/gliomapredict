@@ -1,0 +1,11 @@
+name: splits_v1
+target_label: idh_label
+test_size: 0.20
+random_state: 20260412
+train_cv_folds: 5
+stratify: true
+artifacts:
+  splits_csv: data/interim/splits_v1.csv
+  splits_parquet: data/interim/splits_v1.parquet
+  split_note: reports/split_design_v1.md
+

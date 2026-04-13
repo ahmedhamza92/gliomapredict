@@ -1,0 +1,62 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='920' height='620' viewBox='0 0 920 620'>
+<rect width='100%' height='100%' fill='white' />
+<text x='460.0' y='24' text-anchor='middle' font-size='20' font-family='Arial, sans-serif'>Logistic Feature Stability</text>
+<text x='460.0' y='46' text-anchor='middle' font-size='12' font-family='Arial, sans-serif' fill='#555'>Bar length = top-k frequency across repeated training-pool fits; color = mean coefficient sign</text>
+<line x1='300.00' y1='60' x2='300.00' y2='585' stroke='#e0e0e0' stroke-width='1' />
+<text x='300.00' y='610' text-anchor='middle' font-size='12' font-family='Arial, sans-serif'>0.0</text>
+<line x1='396.00' y1='60' x2='396.00' y2='585' stroke='#e0e0e0' stroke-width='1' />
+<text x='396.00' y='610' text-anchor='middle' font-size='12' font-family='Arial, sans-serif'>0.2</text>
+<line x1='492.00' y1='60' x2='492.00' y2='585' stroke='#e0e0e0' stroke-width='1' />
+<text x='492.00' y='610' text-anchor='middle' font-size='12' font-family='Arial, sans-serif'>0.4</text>
+<line x1='588.00' y1='60' x2='588.00' y2='585' stroke='#e0e0e0' stroke-width='1' />
+<text x='588.00' y='610' text-anchor='middle' font-size='12' font-family='Arial, sans-serif'>0.6</text>
+<line x1='684.00' y1='60' x2='684.00' y2='585' stroke='#e0e0e0' stroke-width='1' />
+<text x='684.00' y='610' text-anchor='middle' font-size='12' font-family='Arial, sans-serif'>0.8</text>
+<line x1='780.00' y1='60' x2='780.00' y2='585' stroke='#e0e0e0' stroke-width='1' />
+<text x='780.00' y='610' text-anchor='middle' font-size='12' font-family='Arial, sans-serif'>1.0</text>
+<text x='290' y='82.00' text-anchor='end' font-size='12' font-family='Arial, sans-serif'>t1c_skewness</text>
+<rect x='300' y='68.00' width='480.00' height='18' fill='#ae2012' />
+<text x='785' y='82.00' font-size='12' font-family='Arial, sans-serif' fill='#444'>top-k 1.00, mean coef -0.434</text>
+<text x='290' y='116.00' text-anchor='end' font-size='12' font-family='Arial, sans-serif'>t1c_std</text>
+<rect x='300' y='102.00' width='480.00' height='18' fill='#ae2012' />
+<text x='785' y='116.00' font-size='12' font-family='Arial, sans-serif' fill='#444'>top-k 1.00, mean coef -0.312</text>
+<text x='290' y='150.00' text-anchor='end' font-size='12' font-family='Arial, sans-serif'>shape_sphericity_approx</text>
+<rect x='300' y='136.00' width='470.40' height='18' fill='#0a9396' />
+<text x='785' y='150.00' font-size='12' font-family='Arial, sans-serif' fill='#444'>top-k 0.98, mean coef 0.370</text>
+<text x='290' y='184.00' text-anchor='end' font-size='12' font-family='Arial, sans-serif'>t1c_grad_std</text>
+<rect x='300' y='170.00' width='470.40' height='18' fill='#ae2012' />
+<text x='785' y='184.00' font-size='12' font-family='Arial, sans-serif' fill='#444'>top-k 0.98, mean coef -0.338</text>
+<text x='290' y='218.00' text-anchor='end' font-size='12' font-family='Arial, sans-serif'>t1c_min</text>
+<rect x='300' y='204.00' width='446.40' height='18' fill='#ae2012' />
+<text x='785' y='218.00' font-size='12' font-family='Arial, sans-serif' fill='#444'>top-k 0.93, mean coef -0.315</text>
+<text x='290' y='252.00' text-anchor='end' font-size='12' font-family='Arial, sans-serif'>t2_iqr</text>
+<rect x='300' y='238.00' width='446.40' height='18' fill='#ae2012' />
+<text x='785' y='252.00' font-size='12' font-family='Arial, sans-serif' fill='#444'>top-k 0.93, mean coef -0.303</text>
+<text x='290' y='286.00' text-anchor='end' font-size='12' font-family='Arial, sans-serif'>t2_max</text>
+<rect x='300' y='272.00' width='441.60' height='18' fill='#0a9396' />
+<text x='785' y='286.00' font-size='12' font-family='Arial, sans-serif' fill='#444'>top-k 0.92, mean coef 0.325</text>
+<text x='290' y='320.00' text-anchor='end' font-size='12' font-family='Arial, sans-serif'>flair_laplace_mean</text>
+<rect x='300' y='306.00' width='427.20' height='18' fill='#ae2012' />
+<text x='785' y='320.00' font-size='12' font-family='Arial, sans-serif' fill='#444'>top-k 0.89, mean coef -0.334</text>
+<text x='290' y='354.00' text-anchor='end' font-size='12' font-family='Arial, sans-serif'>t2_kurtosis</text>
+<rect x='300' y='340.00' width='340.80' height='18' fill='#ae2012' />
+<text x='785' y='354.00' font-size='12' font-family='Arial, sans-serif' fill='#444'>top-k 0.71, mean coef -0.253</text>
+<text x='290' y='388.00' text-anchor='end' font-size='12' font-family='Arial, sans-serif'>t1c_mean</text>
+<rect x='300' y='374.00' width='206.40' height='18' fill='#ae2012' />
+<text x='785' y='388.00' font-size='12' font-family='Arial, sans-serif' fill='#444'>top-k 0.43, mean coef -0.242</text>
+<text x='290' y='422.00' text-anchor='end' font-size='12' font-family='Arial, sans-serif'>t1c_p10</text>
+<rect x='300' y='408.00' width='172.80' height='18' fill='#ae2012' />
+<text x='785' y='422.00' font-size='12' font-family='Arial, sans-serif' fill='#444'>top-k 0.36, mean coef -0.224</text>
+<text x='290' y='456.00' text-anchor='end' font-size='12' font-family='Arial, sans-serif'>t1c_p90</text>
+<rect x='300' y='442.00' width='163.20' height='18' fill='#ae2012' />
+<text x='785' y='456.00' font-size='12' font-family='Arial, sans-serif' fill='#444'>top-k 0.34, mean coef -0.236</text>
+<text x='290' y='490.00' text-anchor='end' font-size='12' font-family='Arial, sans-serif'>t1c_max</text>
+<rect x='300' y='476.00' width='86.40' height='18' fill='#0a9396' />
+<text x='785' y='490.00' font-size='12' font-family='Arial, sans-serif' fill='#444'>top-k 0.18, mean coef 0.200</text>
+<text x='290' y='524.00' text-anchor='end' font-size='12' font-family='Arial, sans-serif'>shape_flatness</text>
+<rect x='300' y='510.00' width='52.80' height='18' fill='#0a9396' />
+<text x='785' y='524.00' font-size='12' font-family='Arial, sans-serif' fill='#444'>top-k 0.11, mean coef 0.181</text>
+<text x='290' y='558.00' text-anchor='end' font-size='12' font-family='Arial, sans-serif'>t1c_grad_mean</text>
+<rect x='300' y='544.00' width='33.60' height='18' fill='#ae2012' />
+<text x='785' y='558.00' font-size='12' font-family='Arial, sans-serif' fill='#444'>top-k 0.07, mean coef -0.192</text>
+</svg>

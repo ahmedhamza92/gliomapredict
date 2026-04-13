@@ -1,0 +1,22 @@
+name: cohort_v1
+source_manifest: data/interim/patient_manifest.csv
+selection:
+  visit_policy: primary_pre_operative_only
+  require_idh_label: true
+  require_tumor_segmentation: true
+  locked_modalities:
+    - flair
+    - t1c
+    - t2
+  preferred_structural_variant: bias
+labels:
+  primary_target: idh_label
+  optional_secondary_label: mgmt_label
+roi:
+  source_mask_column: tumor_segmentation_path
+  binary_rule: mask_gt_0
+artifacts:
+  cohort_csv: data/interim/cohort_v1.csv
+  cohort_parquet: data/interim/cohort_v1.parquet
+  cohort_note: reports/cohort_freeze_v1.md
+
